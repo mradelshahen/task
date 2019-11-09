@@ -1,0 +1,57 @@
+.calendar{
+    width: 50%;
+
+}
+.list{
+    width: 50%;
+    padding: 10px 16px ;
+}
+.list ul{
+    /* border: 3px solid #f00; */
+    overflow: hidden;
+    max-height: 460px;
+    padding: 10px;
+    margin: 0;
+
+}
+.list ul li{
+    padding: 10px;
+    list-style: none;
+    border-bottom: 1px solid rgba(138, 131, 131,0.3);
+}
+.list ul li button{
+    margin: 0 10px;
+    background:none;
+    color: #999;
+    border: 1px solid #08fdd8;
+    border-radius: 10px;
+    cursor: pointer;
+    display: block;
+    padding: 5px 10px;
+    font-weight: bold;
+    text-align: center;
+}
+.list ul li button:hover{
+    color: #08fdd8;
+    border: 1px solid #999;    
+}
+@media(max-width:991px){
+    .calendar{
+        width: 100%;
+        float: none;
+        margin: 0 auto;
+    
+    }
+    .list{
+        width: 100%;
+        float: none; 
+        margin: 0 auto;
+   }
+   .list ul{
+        padding: 10px 0; 
+   }
+   .list ul li{
+    padding: 10px 0; 
+    }
+    
+}

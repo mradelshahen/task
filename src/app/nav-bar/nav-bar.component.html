@@ -1,0 +1,21 @@
+<nav>
+  <div class="container">
+    <h3><span>Q</span>ua<span>N</span>ode</h3>
+
+    <div
+    [ngClass]="{'open': tog, 'close': !tog}"
+    (click)="toggle()" class="menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <ul class="ul"
+    [ngClass]="{'ull': tog, 'ul': !tog}"
+    >
+      <li routerLink="/">New</li>
+      <li routerLink="/calendar">Calendar</li>
+    </ul>
+    <div class="clearfix"></div>
+  </div>
+</nav>

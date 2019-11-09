@@ -1,0 +1,59 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@fullcalendar/core/main.css';
+@import '~@fullcalendar/daygrid/main.css';
+*{
+    box-sizing: border-box;
+}
+body{
+    background: url("images/back.jpg") top center ;
+    background-size: cover;
+    background-attachment: fixed;
+    /* border: 5px solid #f00; */
+    height: 100% ;
+    position: relative;
+    padding: 70px 0 50px 0 ;
+    margin: 0;
+    color: #fff;
+    font-size: 16px;
+}
+/* 
+.overlay{
+    background-color:rgba(0, 0, 0, 0.7);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+} */
+/********************************* my famework **/
+.clearfix{
+    clear: both;
+}
+.float-left{
+    float: left;
+}
+.float-right{
+    float: right;
+}
+.container{
+    margin: 0 auto;
+    padding: 0 15px;
+}
+@media(max-width:767px){
+    
+}
+@media(min-width:768px)and(max-width:990px){
+    .container{
+        width: 750px;
+    }
+}
+@media(min-width:991px){
+    .container{
+        width: 970px;
+    }
+}
+@media(min-width:1200px){
+    .container{
+        width: 1170px;
+    }    
+}

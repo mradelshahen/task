@@ -1,0 +1,82 @@
+<form #form="ngForm" (ngSubmit)="submit(form)">
+    <!-- #form="ngForm" (ngSubmit)="submit(form)" -->
+
+  <label class="address">Register</label> <br />
+
+  <div class="section">
+    <label>Name </label>
+
+    <div class="alert">
+      <div *ngIf="name.touched && name.invalid">
+        * this field is required
+      </div>
+    </div>
+
+    <br />
+    <input type="text" placeholder="Write Ur Name" name="name" ngModel #name="ngModel" required />
+
+  </div>
+
+  <div class="section">
+    <label>Email </label>
+
+    <div class="alert">
+      <div *ngIf="email.touched && email.invalid">
+        * this field is required
+      </div>
+    </div>
+
+    <br />
+
+    <input type="email" placeholder="Write Ur email" name="email" ngModel #email="ngModel" required />
+  </div>
+
+  <div class="section">
+    <label>Phone </label>
+
+    <div class="alert">
+      <div *ngIf="phone.touched && phone.invalid">
+        * this field is required
+      </div>
+    </div>
+
+    <br />
+    <input type="text" placeholder="Write Ur Phone" name="phone" ngModel #phone="ngModel" required />
+  </div>
+
+  <div class="section">
+
+    <label>Birth Date </label>
+
+    <div class="alert">
+      <div *ngIf="date.touched && date.invalid">
+        * this field is required
+      </div>
+    </div>
+
+    <br />
+    <input type="date" placeholder="Write Ur Birth Date" name="date" ngModel #date="ngModel" required />
+  </div>
+
+  <div class="section">
+    <label>Profile Picture </label>
+
+    <div class="alert">
+      <div *ngIf="file.touched && file.invalid">
+        * this field is required
+      </div>
+    </div>
+
+    <br />
+    <input type="file" placeholder="Text Ur Name" name="file" ngModel #file="ngModel" required />
+  </div>
+  <br />
+  <!-- [disabled]="form.invalid" -->
+  <button type="submit"  
+  [disabled]="form.invalid"
+  routerLink="/calendar"
+  (click)="createPost(name.value, email.value, phone.value, date.value, file.value)">
+    Register
+  </button>
+
+</form>
